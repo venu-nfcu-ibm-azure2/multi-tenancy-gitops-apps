@@ -19,7 +19,7 @@ spec:
       description: environment
       default: dev
     - name: app-path
-      description: Application
+      description: Path in gitops repo
       default: mq/environments
     - name: security
       description: enable app security

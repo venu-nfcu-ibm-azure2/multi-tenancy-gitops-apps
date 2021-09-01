@@ -18,7 +18,7 @@ spec:
       description: environment
       default: dev
     - name: app-path
-      description: Service
+      description: Path in gitops repo
       default: mq/environments
     - name: security
       description: Enable security for queueManager

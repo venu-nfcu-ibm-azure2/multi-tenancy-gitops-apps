@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tools-mq-selfsigned-certificate
+  name: tools-cert-manager-artifacts
   annotations:
-    argocd.argoproj.io/sync-wave: "260"
+    argocd.argoproj.io/sync-wave: "250"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: mq/environments/tools/certificates/mq-selfsigned-certificate
+    path: mq/environments/tools/
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:

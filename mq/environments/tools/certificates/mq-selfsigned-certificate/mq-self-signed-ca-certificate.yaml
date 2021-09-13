@@ -2,6 +2,8 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: mq-self-signed-ca-cert
+  annotations:
+    argocd.argoproj.io/sync-wave: "260"
   labels:
     gitops.tier.group: cntk
 spec:
@@ -9,7 +11,7 @@ spec:
   isCA: true
   dnsNames:
     - >- 
-      *.<cluster-domain>
+      *.ibmcloud-roks-6zdkwsxn-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
   secretName: mq-self-signed-ca-cert
   issuerRef:
     group: cert-manager.io

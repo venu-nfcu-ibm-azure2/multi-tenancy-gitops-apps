@@ -1,26 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: staging-mq-infra-instance
+  name: tools-mq-selfsigned-certificate
   annotations:
-    argocd.argoproj.io/sync-wave: "300"
+    argocd.argoproj.io/sync-wave: "260"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: staging
+    namespace: tools
     server: https://kubernetes.default.svc
-  project: services
+  project: applications
   source:
-    path: mq/environments/staging/mq-infra
+    path: mq/environments/tools/certificates/mq-selfsigned-certificate
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
     targetRevision: master
-    helm:
-      valueFiles:
-      - values.yaml
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - Replace=true

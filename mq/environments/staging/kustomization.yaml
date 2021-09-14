@@ -1,6 +1,6 @@
 resources:
-- certificates/staging-mq-client-certificate.yaml
-- certificates/staging-mq-server-certificate.yaml
+#- certificates/staging-mq-client-certificate.yaml
+#- certificates/staging-mq-server-certificate.yaml
 
 ## NOTES:
 ## - mq-infra/* is expliclity not handled here as it is handled by 

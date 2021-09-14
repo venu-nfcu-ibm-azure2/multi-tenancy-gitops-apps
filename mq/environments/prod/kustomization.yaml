@@ -1,6 +1,6 @@
 resources:
-- certificates/prod-mq-client-certificate.yaml
-- certificates/prod-mq-server-certificate.yaml
+#- certificates/prod-mq-client-certificate.yaml
+#- certificates/prod-mq-server-certificate.yaml
 
 ## NOTES:
 ## - mq-infra/* is expliclity not handled here as it is handled by 
